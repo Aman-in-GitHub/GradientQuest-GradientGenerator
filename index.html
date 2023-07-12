@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script type="module" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+
+    <title>Gradient Quest</title>
+  </head>
+  <body class="h-[100dvh]">
+    <nav></nav>
+    <main
+      class="flex justify-center items-center h-full select-none text-[#232323]"
+    >
+      <div
+        class="bg-white w-80 md:w-96 flex flex-col gap-4 py-6 px-2 shadow-lg rounded"
+      >
+        <div class="w-[90%] h-40 display mx-auto rounded"></div>
+        <div class="flex justify-center gap-16 md:gap-28">
+          <div class="flex flex-col items-center justify-center gap-2">
+            <span class="font-bold text-lg">Direction</span>
+            <select
+              name="direction"
+              id="direction"
+              class="outline-none rounded border-2 py-0.5 md:py-1 bg-white font-medium"
+            >
+              <option value="to right" class="text-xs md:text-base font-medium">
+                To Right
+              </option>
+              <option value="to left" class="text-xs md:text-base font-medium">
+                To Left
+              </option>
+              <option value="to top" class="text-xs md:text-base font-medium">
+                To Top
+              </option>
+              <option
+                value="to bottom"
+                class="text-xs md:text-base font-medium"
+              >
+                To Bottom
+              </option>
+            </select>
+          </div>
+          <div class="flex flex-col items-center justify-center gap-2">
+            <span class="font-bold text-lg" id="coooooooolors">Colors</span>
+            <div>
+              <input
+                type="color"
+                value="#ee9ca7"
+                class="outline-none bg-transparent h-8"
+              />
+              <input
+                type="color"
+                value="#ffdde1"
+                class="outline-none bg-transparent h-8"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-gray-100 h-20 mx-4 px-3 py-2 text-xs md:text-lg select-all"
+        >
+          <code id="code">
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+            rgba(121,9,9,1) 35%, rgba(0,212,255,1) 100%);
+          </code>
+        </div>
+        <div
+          class="flex justify-around items-center font-semibold md:font-bold text-xs md:text-base"
+        >
+          <button
+            class="px-2 whitespace-nowrap py-[0.3rem] text-white rounded-sm active:scale-95 hover:scale-105 duration-300 w-fit"
+            id="random"
+          >
+            Random Gradient
+          </button>
+          <button class="w-fit" id="click" title="Download as jpeg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill=""
+              class="bi bi-file-earmark-arrow-down-fill"
+              viewBox="0 0 16 16"
+              id="download"
+            >
+              <path
+                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"
+              />
+            </svg>
+          </button>
+          <button
+            class="border-2 px-2 py-[0.3rem] whitespace-nowrap rounded-sm active:scale-95 hover:scale-105 duration-300 w-20 md:w-28"
+            id="copy"
+            data-clipboard-target="#code"
+          >
+            Copy Code
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
